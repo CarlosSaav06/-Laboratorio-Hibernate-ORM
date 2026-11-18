@@ -1,0 +1,7 @@
+# Copiar este archivo como db.properties (en la misma carpeta que pom.xml).
+# Sustituye db.password con la contraseña real de TU PostgreSQL.
+db.url=jdbc:postgresql://localhost:5432/agenda_orm
+db.user=postgres
+db.password=COLOCA_AQUI_TU_CLAVE
+# Para servidores remotos, usa SSL en la URL con sslmode=verify-full.
+# Ejemplo: jdbc:postgresql://servidor:5432/agenda_orm?sslmode=verify-full&sslrootcert=C:/certs/ca.crt

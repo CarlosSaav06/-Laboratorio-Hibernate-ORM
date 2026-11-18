@@ -1,0 +1,11 @@
+# Claves locales: NO subir al repositorio
+db.properties
+.env
+# Archivos generados por IntelliJ / Maven
+.idea/
+*.iml
+target/
+out/
+.DS_Store
+# Archivos personales
+*.log

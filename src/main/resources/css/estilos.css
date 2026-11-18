@@ -1,0 +1,60 @@
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-color: #f5f8fb;
+    -fx-text-fill: #1b2b36;
+}
+.fondo-general { -fx-background-color: #f5f8fb; }
+.panel-marca { -fx-background-color: linear-gradient(to bottom right, #15394b, #0b6673); }
+.marca-eyebrow { -fx-text-fill: #b7e2e6; -fx-font-weight: bold; -fx-letter-spacing: 1.8px; }
+.marca-titulo { -fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: white; }
+.marca-subtitulo { -fx-font-size: 16px; -fx-text-fill: #e1f3f4; -fx-line-spacing: 5; }
+.marca-pie { -fx-font-size: 11px; -fx-text-fill: #d4f0f2; }
+.titulo-principal { -fx-font-size: 27px; -fx-font-weight: bold; -fx-text-fill: #183647; }
+.splash-title { -fx-font-size: 21px; -fx-font-weight: bold; -fx-text-fill: #183647; }
+.subtitulo { -fx-text-fill: #647683; }
+.subtitulo-fuerte { -fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #183647; }
+.etiqueta-campo { -fx-font-weight: bold; -fx-text-fill: #355568; }
+.mensaje-ayuda { -fx-text-fill: #728493; -fx-font-size: 12px; }
+.campo {
+    -fx-background-color: white;
+    -fx-background-radius: 8;
+    -fx-border-color: #d7e2e8;
+    -fx-border-radius: 8;
+    -fx-padding: 10 12;
+    -fx-prompt-text-fill: #93a2ae;
+}
+.campo:focused { -fx-border-color: #138c99; -fx-border-width: 1.5; }
+.button { -fx-cursor: hand; -fx-font-weight: bold; -fx-padding: 10 17; -fx-background-radius: 8; }
+.boton-primario { -fx-background-color: #0e7885; -fx-text-fill: white; }
+.boton-primario:hover { -fx-background-color: #0a6370; }
+.boton-secundario { -fx-background-color: #e5f1f3; -fx-text-fill: #1e6673; }
+.boton-secundario:hover { -fx-background-color: #d0e7ea; }
+.boton-peligro { -fx-background-color: #fceced; -fx-text-fill: #aa3846; }
+.boton-peligro:hover { -fx-background-color: #f8d5d9; }
+.boton-enlace { -fx-background-color: transparent; -fx-text-fill: #168694; -fx-padding: 5 6; }
+.boton-enlace:hover { -fx-underline: true; }
+.button:disabled { -fx-opacity: 0.55; }
+.cabecera { -fx-background-color: white; -fx-border-color: transparent transparent #e2eaef transparent; }
+.eyebrow { -fx-text-fill: #158996; -fx-font-size: 11px; -fx-font-weight: bold; }
+.sesion { -fx-text-fill: #425d6d; -fx-font-size: 12px; }
+.seccion-tabla { -fx-background-color: #f7f9fc; }
+.division-central { -fx-background-color: transparent; -fx-padding: 0; }
+.division-central .split-pane-divider { -fx-background-color: #e0e8ee; -fx-padding: 0 1; }
+.panel-detalle { -fx-background-color: white; }
+.contador { -fx-text-fill: #5c8791; -fx-font-weight: bold; }
+.tabla-usuarios { -fx-background-color: white; -fx-background-radius: 10; -fx-border-color: #e1e9ee; -fx-border-radius: 10; }
+.tabla-usuarios .column-header-background { -fx-background-color: #eaf2f6; }
+.tabla-usuarios .column-header { -fx-background-color: transparent; -fx-padding: 12 7; }
+.tabla-usuarios .column-header .label { -fx-text-fill: #34566a; -fx-font-weight: bold; }
+.tabla-usuarios .table-row-cell { -fx-cell-size: 43px; -fx-background-color: white; }
+.tabla-usuarios .table-row-cell:odd { -fx-background-color: #f8fbfc; }
+.tabla-usuarios .table-row-cell:selected { -fx-background-color: #d6edf0; }
+.tabla-usuarios .table-row-cell:selected .text { -fx-fill: #204759; }
+.marco-foto { -fx-background-color: #e8f0f3; -fx-background-radius: 12; }
+.placeholder-foto { -fx-text-fill: #8fb0bd; -fx-font-weight: bold; }
+.detalle-nombre { -fx-text-fill: #1d394b; -fx-font-weight: bold; -fx-font-size: 18px; -fx-text-alignment: center; }
+.detalle-login { -fx-text-fill: #128894; }
+.etiqueta-mini { -fx-font-size: 10px; -fx-text-fill: #8495a0; -fx-font-weight: bold; }
+.valor-detalle { -fx-text-fill: #26475a; }
+.pie-aplicacion { -fx-background-color: white; -fx-border-color: #e2eaef transparent transparent transparent; }

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<HBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ni.edu.uam.agenda.controller.InicioController" prefWidth="900" prefHeight="590">
+    <VBox prefWidth="390" spacing="21" alignment="CENTER_LEFT" styleClass="panel-marca">
+        <padding><Insets top="68" right="45" bottom="68" left="50"/></padding>
+        <Label text="UAM  /  LABORATORIO" styleClass="marca-eyebrow"/>
+        <Label text="AGENDA&#10;DE USUARIOS" styleClass="marca-titulo" wrapText="true"/>
+        <Label text="Persistencia relacional aplicada a una interfaz de escritorio." styleClass="marca-subtitulo" wrapText="true"/>
+        <Region VBox.vgrow="ALWAYS"/>
+        <Label text="JavaFX    ·    Hibernate ORM    ·    PostgreSQL" styleClass="marca-pie"/>
+    </VBox>
+    <StackPane HBox.hgrow="ALWAYS" styleClass="fondo-general">
+        <VBox alignment="CENTER_LEFT" spacing="18" maxWidth="335">
+            <Label text="Bienvenido" styleClass="titulo-principal"/>
+            <Label text="Inicia sesión para gestionar las cuentas." styleClass="subtitulo" wrapText="true"/>
+            <Region prefHeight="12"/>
+            <Label text="Nombre de usuario" styleClass="etiqueta-campo"/>
+            <TextField fx:id="entradaUsuario" promptText="ej. carlos.dev" styleClass="campo"/>
+            <Label text="Contraseña" styleClass="etiqueta-campo"/>
+            <PasswordField fx:id="entradaClave" promptText="Tu contraseña" onAction="#ingresar" styleClass="campo"/>
+            <Label fx:id="aviso" text="" wrapText="true" styleClass="mensaje-ayuda" minHeight="30"/>
+            <Button fx:id="botonIngresar" text="Entrar a la agenda" onAction="#ingresar" maxWidth="Infinity" styleClass="boton-primario"/>
+            <HBox alignment="CENTER" spacing="10">
+                <Label text="¿No tienes cuenta?" styleClass="subtitulo"/>
+                <Button fx:id="botonRegistro" text="Crear cuenta" onAction="#registrar" styleClass="boton-enlace"/>
+            </HBox>
+        </VBox>
+    </StackPane>
+</HBox>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ni.edu.uam.agenda.controller.UsuariosController" prefWidth="1110" prefHeight="730" styleClass="fondo-general">
+    <top>
+        <VBox spacing="25" styleClass="cabecera">
+            <padding><Insets top="26" right="40" bottom="28" left="40"/></padding>
+            <HBox alignment="CENTER_LEFT" spacing="12">
+                <VBox spacing="5">
+                    <Label text="AGENDA / ORM" styleClass="eyebrow"/>
+                    <Label text="Administración de usuarios" styleClass="titulo-principal"/>
+                </VBox>
+                <Region HBox.hgrow="ALWAYS"/>
+                <VBox alignment="CENTER_RIGHT" spacing="4">
+                    <Label fx:id="sesionActual" text="" styleClass="sesion"/>
+                    <Button text="Cerrar sesión" onAction="#cerrarSesion" styleClass="boton-enlace"/>
+                </VBox>
+            </HBox>
+            <HBox spacing="12" alignment="CENTER_LEFT">
+                <TextField fx:id="campoBusqueda" promptText="Buscar por nombre, usuario o correo…" HBox.hgrow="ALWAYS" styleClass="campo"/>
+                <Button fx:id="botonBuscar" text="Buscar" onAction="#buscar" styleClass="boton-secundario"/>
+                <Button fx:id="botonAgregar" text="+ Nuevo usuario" onAction="#agregar" styleClass="boton-primario"/>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <SplitPane dividerPositions="0.70" styleClass="division-central">
+            <items>
+                <VBox spacing="12" styleClass="seccion-tabla">
+                    <padding><Insets top="25" right="22" bottom="20" left="38"/></padding>
+                    <HBox alignment="CENTER_LEFT" spacing="12">
+                        <Label text="Cuentas registradas" styleClass="subtitulo-fuerte"/>
+                        <Region HBox.hgrow="ALWAYS"/>
+                        <Label fx:id="totalUsuarios" text="0 registros" styleClass="contador"/>
+                    </HBox>
+                    <TableView fx:id="tabla" VBox.vgrow="ALWAYS" styleClass="tabla-usuarios">
+                        <columns>
+                            <TableColumn fx:id="columnaNombre" text="Nombre" prefWidth="190"/>
+                            <TableColumn fx:id="columnaLogin" text="Usuario" prefWidth="150"/>
+                            <TableColumn fx:id="columnaCorreo" text="Correo electrónico" prefWidth="240"/>
+                            <TableColumn fx:id="columnaFecha" text="Registro" prefWidth="110"/>
+                        </columns>
+                    </TableView>
+                </VBox>
+                <VBox spacing="18" styleClass="panel-detalle" alignment="TOP_CENTER">
+                    <padding><Insets top="30" right="26" bottom="20" left="26"/></padding>
+                    <Label text="FICHA DE USUARIO" styleClass="eyebrow"/>
+                    <StackPane styleClass="marco-foto" minWidth="138" minHeight="138" maxWidth="138" maxHeight="138">
+                        <Label text="USUARIO" styleClass="placeholder-foto"/>
+                        <ImageView fx:id="detalleFoto" fitWidth="132" fitHeight="132" preserveRatio="true"/>
+                    </StackPane>
+                    <Label fx:id="detalleNombre" text="Selecciona una fila" styleClass="detalle-nombre" wrapText="true"/>
+                    <Label fx:id="detalleUsuario" text="—" styleClass="detalle-login"/>
+                    <Separator/>
+                    <VBox spacing="6" alignment="TOP_LEFT" maxWidth="Infinity">
+                        <Label text="CORREO ELECTRÓNICO" styleClass="etiqueta-mini"/>
+                        <Label fx:id="detalleCorreo" text="—" styleClass="valor-detalle" wrapText="true"/>
+                    </VBox>
+                    <VBox spacing="6" alignment="TOP_LEFT" maxWidth="Infinity">
+                        <Label text="FECHA DE ALTA" styleClass="etiqueta-mini"/>
+                        <Label fx:id="detalleFecha" text="—" styleClass="valor-detalle"/>
+                    </VBox>
+                    <Region VBox.vgrow="ALWAYS"/>
+                    <Button fx:id="botonEditar" text="Editar cuenta" onAction="#editar" maxWidth="Infinity" styleClass="boton-secundario"/>
+                    <Button fx:id="botonEliminar" text="Eliminar cuenta" onAction="#eliminar" maxWidth="Infinity" styleClass="boton-peligro"/>
+                </VBox>
+            </items>
+        </SplitPane>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER_LEFT" styleClass="pie-aplicacion">
+            <padding><Insets top="12" right="40" bottom="12" left="40"/></padding>
+            <Label fx:id="estado" text="Listo" styleClass="mensaje-ayuda"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label text="Persistencia mediante Hibernate ORM y pgJDBC" styleClass="mensaje-ayuda"/>
+        </HBox>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ni.edu.uam.agenda.controller.FormularioUsuarioController" spacing="12" minWidth="470">
+    <padding><Insets top="18" right="18" bottom="18" left="18"/></padding>
+    <HBox spacing="12">
+        <VBox spacing="5" HBox.hgrow="ALWAYS">
+            <Label text="Nombre" styleClass="etiqueta-campo"/>
+            <TextField fx:id="campoNombre" promptText="Nombre" styleClass="campo"/>
+        </VBox>
+        <VBox spacing="5" HBox.hgrow="ALWAYS">
+            <Label text="Apellido" styleClass="etiqueta-campo"/>
+            <TextField fx:id="campoApellido" promptText="Apellido" styleClass="campo"/>
+        </VBox>
+    </HBox>
+    <Label text="Usuario" styleClass="etiqueta-campo"/>
+    <TextField fx:id="campoUsuario" promptText="Nombre de usuario único" styleClass="campo"/>
+    <Label text="Correo electrónico" styleClass="etiqueta-campo"/>
+    <TextField fx:id="campoCorreo" promptText="correo@ejemplo.com" styleClass="campo"/>
+    <Label fx:id="etiquetaClave" text="Contraseña" styleClass="etiqueta-campo"/>
+    <PasswordField fx:id="campoClave" promptText="Al menos ocho caracteres" styleClass="campo"/>
+    <Separator/>
+    <Label text="Fotografía opcional (se guarda la ruta local)" styleClass="etiqueta-campo"/>
+    <HBox spacing="14" alignment="CENTER_LEFT">
+        <StackPane styleClass="marco-foto" minWidth="88" minHeight="88" maxWidth="88" maxHeight="88">
+            <Label text="FOTO" styleClass="placeholder-foto"/>
+            <ImageView fx:id="vistaFoto" fitWidth="82" fitHeight="82" preserveRatio="true"/>
+        </StackPane>
+        <VBox spacing="8" HBox.hgrow="ALWAYS">
+            <TextField fx:id="campoFoto" promptText="Sin fotografía" editable="false" styleClass="campo"/>
+            <HBox spacing="8">
+                <Button text="Elegir imagen" onAction="#elegirImagen" styleClass="boton-secundario"/>
+                <Button text="Quitar" onAction="#quitarImagen" styleClass="boton-enlace"/>
+            </HBox>
+        </VBox>
+    </HBox>
+</VBox>
